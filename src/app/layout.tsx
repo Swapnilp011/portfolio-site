@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from "@/components/ui/toaster"
+import '@/lib/firebase';
 
 export const metadata: Metadata = {
   title: 'Swapnil Pawar - B.Tech IT Student Portfolio',
