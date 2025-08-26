@@ -13,7 +13,7 @@ export default function Projects() {
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">My Projects</h2>
           <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
-            Here are some of the projects I&apos;ve worked on, showcasing my skills and passion for development.
+            Here are some of the projects I've worked on, showcasing my skills and passion for development.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
