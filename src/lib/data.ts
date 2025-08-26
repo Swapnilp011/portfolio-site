@@ -18,7 +18,7 @@ export const projects: Project[] = [
     description: 'Designed and developed a YouTube.com homepage using HTML and CSS, focusing on layout design, responsiveness, and maintaining visual similarity to the original platform.',
     image: 'https://picsum.photos/600/400?random=1',
     tags: ['HTML', 'CSS', 'Frontend'],
-    repoUrl: '#',
+    repoUrl: 'https://github.com/swapnildpawar/Youtube-Clone',
   },
   {
     title: 'Weather Forecasting App',
@@ -66,5 +66,5 @@ export const posts: Post[] = [
 
 export const socialLinks = [
     { name: 'GitHub', icon: Github, url: 'https://github.com/swapnildpawar' },
-    { name: 'LinkedIn', icon: Briefcase, url: 'https://www.linkedin.com/in/swapnil-pawar-1a2b3c4d' }
+    { name: 'LinkedIn', icon: Briefcase, url: 'https://www.linkedin.com/in/swapnilp011/' }
 ];
