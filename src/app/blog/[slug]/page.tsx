@@ -41,9 +41,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           Posted on {post.date} by {post.author}
         </p>
       </header>
-      <div className="relative aspect-video mb-8 md:mb-12 rounded-lg overflow-hidden shadow-lg">
-        <Image src={post.image} alt={post.title} fill className="object-cover" data-ai-hint="blog post header"/>
-      </div>
+      {post.image && (
+        <div className="relative aspect-video mb-8 md:mb-12 rounded-lg overflow-hidden shadow-lg">
+          <Image src={post.image} alt={post.title} fill className="object-cover" data-ai-hint="blog post header"/>
+        </div>
+      )}
       <div
         className="prose dark:prose-invert lg:prose-xl max-w-none mx-auto"
         dangerouslySetInnerHTML={{ __html: post.content }}

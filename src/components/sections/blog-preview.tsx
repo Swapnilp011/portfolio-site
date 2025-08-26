@@ -22,15 +22,17 @@ export default function BlogPreview() {
             <Card key={post.slug} className="flex flex-col overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out shadow-lg hover:shadow-2xl">
               <Link href={`/blog/${post.slug}`} className="block">
                 <CardHeader className="p-0">
-                  <div className="aspect-video relative">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover rounded-t-lg"
-                      data-ai-hint="blog post"
-                    />
-                  </div>
+                  {post.image && (
+                    <div className="aspect-video relative">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover rounded-t-lg"
+                        data-ai-hint="blog post"
+                      />
+                    </div>
+                  )}
                 </CardHeader>
                 <CardContent className="p-6 flex-grow flex flex-col">
                   <p className="text-sm text-muted-foreground mb-2">{post.date}</p>

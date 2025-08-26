@@ -16,14 +16,15 @@ export const projects: Project[] = [
   {
     title: 'YouTube Clone Homepage',
     description: 'Designed and developed a YouTube.com homepage using HTML and CSS, focusing on layout design, responsiveness, and maintaining visual similarity to the original platform.',
-    image: 'https://picsum.photos/600/400?random=1',
+    image: '',
     tags: ['HTML', 'CSS', 'Frontend'],
   },
   {
     title: 'Weather Forecasting App',
     description: 'Designed and built an Android app using Java that fetches weather forecasts from an API, providing users with up-to-date weather information.',
-    image: 'https://picsum.photos/600/400?random=2',
+    image: '',
     tags: ['Android', 'Java', 'API'],
+    repoUrl: 'https://github.com/Swapnilp011/Weather-Forecasting-App-Android',
   },
 ];
 
@@ -33,7 +34,7 @@ export const posts: Post[] = [
         title: 'Building the YouTube Homepage with HTML & CSS',
         date: '2024-08-15',
         author: 'Swapnil Pawar',
-        image: 'https://picsum.photos/800/450?random=5',
+        image: '',
         excerpt: 'A walkthrough of how I recreated the YouTube homepage layout using just HTML and CSS, focusing on structure, styling, and responsiveness.',
         content: `
 <p>Recreating a complex layout like YouTube's homepage is a great exercise in mastering HTML and CSS. This project challenged me to pay close attention to detail, from the video grid to the sidebar navigation.</p>
@@ -48,7 +49,7 @@ export const posts: Post[] = [
         title: 'Creating a Weather Forecasting App in Android with Java',
         date: '2023-05-28',
         author: 'Swapnil Pawar',
-        image: 'https://picsum.photos/800/450?random=6',
+        image: '',
         excerpt: 'A summary of my project to build a native Android weather app. I used Java and integrated a third-party weather API to fetch and display real-time data.',
         content: `
 <p>This project was my first major dive into Android development with Java. The goal was to create a simple yet functional weather app that could fetch data from a real-world API.</p>

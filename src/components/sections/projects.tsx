@@ -20,15 +20,17 @@ export default function Projects() {
           {projects.map((project) => (
             <Card key={project.title} className="flex flex-col overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out shadow-lg hover:shadow-2xl">
               <CardHeader>
-                <div className="aspect-video relative">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover rounded-t-lg"
-                    data-ai-hint="project screenshot"
-                  />
-                </div>
+                {project.image && (
+                  <div className="aspect-video relative">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover rounded-t-lg"
+                      data-ai-hint="project screenshot"
+                    />
+                  </div>
+                )}
               </CardHeader>
               <CardContent className="flex-grow">
                 <CardTitle className="font-headline text-2xl mb-2">{project.title}</CardTitle>
