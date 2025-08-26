@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="md:w-1/2 flex justify-center">
         <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
            <Image
-            src="https://picsum.photos/400/400"
+            src="https://i.imgur.com/kQ8bQ7d.jpeg"
             alt="Profile Picture"
             width={400}
             height={400}
