@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="md:w-1/2 flex justify-center">
         <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
            <Image
-            src="https://i.imgur.com/81i2hP9.jpeg"
+            src="https://raw.githubusercontent.com/Swapnilp011/profile-pictures/main/WhatsApp%20Image%202025-08-26%20at%2020.01.56_ab8a3dea.jpg"
             alt="Profile Picture"
             width={400}
             height={400}
