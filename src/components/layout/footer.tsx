@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center space-x-2">
              <Code2 className="h-6 w-6 text-primary" />
-             <span className="font-bold font-headline">SkillSlate</span>
+             <span className="font-bold font-headline">Swapnil Pawar</span>
           </div>
           <div className="flex gap-2">
             {socialLinks.map((link) => (
@@ -22,7 +22,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} SkillSlate. All rights reserved.
+            &copy; {new Date().getFullYear()} Swapnil Pawar. All rights reserved.
           </p>
         </div>
       </div>

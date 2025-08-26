@@ -17,7 +17,7 @@ export default function Header() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Code2 className="h-6 w-6 text-primary" />
             <span className="hidden font-bold sm:inline-block font-headline">
-              SkillSlate
+              Swapnil Pawar
             </span>
           </Link>
           <nav className="flex items-center gap-6 text-sm">
@@ -44,7 +44,7 @@ export default function Header() {
               <SheetContent side="left">
                 <Link href="/" className="flex items-center space-x-2 mb-6">
                   <Code2 className="h-6 w-6 text-primary" />
-                  <span className="font-bold font-headline">SkillSlate</span>
+                  <span className="font-bold font-headline">Swapnil Pawar</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navLinks.map((link) => (

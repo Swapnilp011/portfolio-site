@@ -8,10 +8,10 @@ export default function Hero() {
     <section id="home" className="container flex flex-col md:flex-row items-center justify-center text-center md:text-left min-h-[calc(100vh-56px)] gap-12 py-16">
       <div className="md:w-1/2 flex flex-col items-center md:items-start gap-4">
         <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-          Hi, I&apos;m a B.Tech IT Student
+          Hi, I&apos;m Swapnil Pawar
         </h1>
         <p className="max-w-xl text-lg text-muted-foreground">
-          Welcome to my digital space! I specialize in full-stack development and have a passion for creating elegant, efficient solutions. I&apos;m currently exploring the world of AI and machine learning.
+          Welcome to my digital space! I am an Information Technology student with a passion for software development and creating elegant, efficient solutions.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
           <Button size="lg" asChild>
@@ -31,7 +31,7 @@ export default function Hero() {
             height={400}
             className="rounded-full object-cover border-4 border-primary/10 shadow-lg"
             priority
-            data-ai-hint="profile picture"
+            data-ai-hint="profile picture man"
           />
           <div className="absolute inset-0 rounded-full border-4 border-primary animate-pulse opacity-20"></div>
         </div>

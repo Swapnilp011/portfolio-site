@@ -4,8 +4,8 @@ import { cn } from '@/lib/utils';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'SkillSlate - B.Tech IT Student Portfolio',
-  description: 'A personal portfolio website to showcase projects and skills.',
+  title: 'Swapnil Pawar - B.Tech IT Student Portfolio',
+  description: 'A personal portfolio website for Swapnil Pawar to showcase projects and skills.',
 };
 
 export default function RootLayout({
