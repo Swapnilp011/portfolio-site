@@ -16,15 +16,17 @@ export const skills: Skill[] = [
 export const projects: Project[] = [
   {
     title: 'Study Gen Hack',
-    description: 'An AI-driven learning platform that personalizes study plans based on a learner’s goals, skills, and schedule. Developed during a 36-hour international hackathon, it transforms notes and books into tailored, interactive, and multilingual study tools using Next.js, Tailwind CSS, Firebase, and Vercel.',
+    description: 'Study Gen Hack is an AI-driven learning platform that personalizes study plans based on a learner’s goals, skills, and schedule. It was developed during a 36-hour international hackathon. The platform transforms notes and books into tailored, interactive, and multilingual study tools. Build a full-stack solution using a modern tech stack including Next.js, Tailwind CSS. The app uses Firebase for data and authentication, and Vercel for Hosting.',
     image: '',
     tags: ['Next.js', 'AI', 'Firebase', 'Tailwind CSS', 'Full-stack'],
   },
   {
     title: 'E-Cell IICT MGMU Website',
-    description: 'A full-stack web application for the E-Cell (Entrepreneurship Cell) featuring secure authentication, profile management, and a modern, responsive UI. Built with Next.js, TypeScript, Firebase, and Tailwind CSS to manage and publish content for students and organizers.',
+    description: 'Developed a full-stack web application for the E-Cell (Entrepreneurship Cell) website using Next.js, React, and TypeScript, and deployed it on Vercel for fast and scalable hosting. Implemented secure authentication and profile management with Firebase Authentication and Firestore to ensure reliable data handling. Designed a modern, responsive UI with Tailwind CSS and ShadCN, enabling the platform to actively publish updates and manage E-Cell content for students and organizers.',
     image: '',
     tags: ['Next.js', 'TypeScript', 'Firebase', 'Tailwind CSS', 'Full-stack'],
+    liveUrl: 'https://e-cell-iictmgmu-website.vercel.app/',
+    repoUrl: 'https://github.com/Swapnilp011/E-cell-website',
   },
   {
     title: 'YouTube Clone Homepage',
