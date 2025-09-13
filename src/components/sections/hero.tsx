@@ -1,9 +1,23 @@
+
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
+import { useEffect } from 'react';
+import { useToast } from '@/hooks/use-toast';
 
 export default function Hero() {
+  const { toast } = useToast();
+
+  useEffect(() => {
+    toast({
+      title: 'Welcome!',
+      description: 'Thanks for visiting my profile.',
+    });
+  }, [toast]);
+
   return (
     <section id="home" className="container flex flex-col md:flex-row items-center justify-center text-center md:text-left min-h-[calc(100vh-56px)] gap-12 py-16">
       <div className="md:w-1/2 flex flex-col items-center md:items-start gap-4">
