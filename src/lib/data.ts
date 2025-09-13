@@ -39,7 +39,6 @@ export const projects: Project[] = [
     description: 'Designed and built an Android app using Java that fetches weather forecasts from an API, providing users with up-to-date weather information.',
     image: '',
     tags: ['Android', 'Java', 'API'],
-    repoUrl: 'https://github.com/Swapnilp011/Weather-Forecasting-App-Android',
   },
 ];
 
