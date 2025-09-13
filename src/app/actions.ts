@@ -20,15 +20,19 @@ export type ContactFormState = {
 };
 
 // Initialize Firebase Admin SDK
-if (!admin.apps.length) {
-  try {
+try {
+  if (!admin.apps.length) {
+    const serviceAccount = JSON.parse(
+      process.env.GOOGLE_APPLICATION_CREDENTIALS as string
+    );
     admin.initializeApp({
-      projectId: "myportfolio-c799b",
+      credential: admin.credential.cert(serviceAccount),
+      projectId: 'myportfolio-c799b'
     });
-  } catch (error: any) {
-    if (!/already exists/u.test(error.message)) {
-      console.error('Firebase admin initialization error', error.stack);
-    }
+  }
+} catch (error: any) {
+  if (!/already exists/u.test(error.message)) {
+    console.error('Firebase admin initialization error', error.stack);
   }
 }
 
