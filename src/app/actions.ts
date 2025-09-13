@@ -22,6 +22,8 @@ export type ContactFormState = {
 // Initialize Firebase Admin SDK
 if (!admin.apps.length) {
   try {
+    // When deployed to App Hosting, GOOGLE_APPLICATION_CREDENTIALS is not set.
+    // The SDK will automatically discover credentials.
     if (process.env.GOOGLE_APPLICATION_CREDENTIALS) {
       const serviceAccount = JSON.parse(
         process.env.GOOGLE_APPLICATION_CREDENTIALS as string
@@ -31,10 +33,9 @@ if (!admin.apps.length) {
         projectId: 'myportfolio-c799b'
       });
     } else {
-        // This is for deployed environments like App Hosting
-        admin.initializeApp({
-            projectId: 'myportfolio-c799b'
-        });
+      admin.initializeApp({
+        projectId: 'myportfolio-c799b'
+      });
     }
   } catch (error: any) {
     console.error('Firebase admin initialization error', error.stack);
