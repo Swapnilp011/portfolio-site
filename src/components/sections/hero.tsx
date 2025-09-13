@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Download } from 'lucide-react';
+import { Download } from 'lucide-react';
 import { useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
 
@@ -30,11 +30,6 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
           <Button size="lg" asChild>
             <Link href="/#projects">View My Work</Link>
-          </Button>
-           <Button size="lg" variant="outline" asChild>
-            <a href="https://drive.google.com/file/d/1cRlgmP5t0ueCDoLu8gORVwLAjY6u8xw9/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-              Download CV <Download className="ml-2 h-4 w-4" />
-            </a>
           </Button>
         </div>
       </div>
