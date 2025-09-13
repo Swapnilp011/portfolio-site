@@ -19,12 +19,9 @@ export type ContactFormState = {
   };
 };
 
-const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT_KEY ? JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY) : undefined;
-
 if (!admin.apps.length) {
   try {
     admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount),
       projectId: "myportfolio-c799b",
     });
   } catch (error: any) {
@@ -56,7 +53,7 @@ export async function submitContactForm(
     const db = admin.firestore();
     await db.collection("contacts").add({
       ...validatedFields.data,
-      submittedAt: new Date(),
+      submittedAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
     revalidatePath("/");
@@ -67,7 +64,7 @@ export async function submitContactForm(
   } catch (error) {
     console.error("Error saving to Firestore:", error);
     return {
-      message: "Something went wrong. Please try again later.",
+      message: "An unexpected error occurred. Please try again later.",
       errors: {}
     }
   }
