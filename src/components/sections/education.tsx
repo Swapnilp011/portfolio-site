@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   Card,
   CardContent,
@@ -22,20 +23,22 @@ export default function Education() {
         <div className="max-w-2xl mx-auto">
           <Card className="shadow-lg">
             <CardHeader className="flex flex-row items-start gap-4">
-              <div className="relative w-20 h-20">
+               <Link href="https://www.mgmu.ac.in/" target="_blank" rel="noopener noreferrer" className="relative w-20 h-20 flex-shrink-0">
                 <Image
                   src="https://cdn.mgmtech.org/static/mgmu.ac.in/assets/images/LogoMGM.svg"
                   alt="MGM University Logo"
                   fill
                   className="object-contain"
                 />
-              </div>
+              </Link>
               <div>
                 <CardTitle className="font-headline text-2xl">
                   Bachelor of Technology - Information Technology
                 </CardTitle>
                 <CardDescription className="text-base">
-                  MGM University, Aurangabad
+                  <Link href="https://www.mgmu.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    MGM University, Aurangabad
+                  </Link>
                 </CardDescription>
               </div>
             </CardHeader>
