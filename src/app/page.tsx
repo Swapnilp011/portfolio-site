@@ -3,6 +3,7 @@ import Footer from '@/components/layout/footer';
 import Hero from '@/components/sections/hero';
 import Projects from '@/components/sections/projects';
 import Skills from '@/components/sections/skills';
+import Education from '@/components/sections/education';
 import BlogPreview from '@/components/sections/blog-preview';
 import Contact from '@/components/sections/contact';
 
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <Projects />
         <Skills />
+        <Education />
         <BlogPreview />
         <Contact />
       </main>
