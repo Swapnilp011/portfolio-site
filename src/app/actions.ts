@@ -19,18 +19,18 @@ export type ContactFormState = {
   };
 };
 
+// Initialize Firebase Admin SDK
 if (!admin.apps.length) {
   try {
     admin.initializeApp({
       projectId: "myportfolio-c799b",
     });
   } catch (error: any) {
-     if (!/already exists/u.test(error.message)) {
-      console.error('Firebase admin initialization error', error.stack)
+    if (!/already exists/u.test(error.message)) {
+      console.error('Firebase admin initialization error', error.stack);
     }
   }
 }
-
 
 export async function submitContactForm(
   prevState: ContactFormState,
