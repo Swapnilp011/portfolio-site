@@ -1,3 +1,4 @@
+
 import type { Project, Skill, Post } from './types';
 import { Code, Database, Wind, Bot, GitBranch, Cpu, Briefcase, PenTool, LayoutTemplate, Link, Github, Smartphone } from 'lucide-react';
 
@@ -13,6 +14,18 @@ export const skills: Skill[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    title: 'Study Gen Hack',
+    description: 'An AI-driven learning platform that personalizes study plans based on a learner’s goals, skills, and schedule. Developed during a 36-hour international hackathon, it transforms notes and books into tailored, interactive, and multilingual study tools using Next.js, Tailwind CSS, Firebase, and Vercel.',
+    image: '',
+    tags: ['Next.js', 'AI', 'Firebase', 'Tailwind CSS', 'Full-stack'],
+  },
+  {
+    title: 'E-Cell IICT MGMU Website',
+    description: 'A full-stack web application for the E-Cell (Entrepreneurship Cell) featuring secure authentication, profile management, and a modern, responsive UI. Built with Next.js, TypeScript, Firebase, and Tailwind CSS to manage and publish content for students and organizers.',
+    image: '',
+    tags: ['Next.js', 'TypeScript', 'Firebase', 'Tailwind CSS', 'Full-stack'],
+  },
   {
     title: 'YouTube Clone Homepage',
     description: 'Designed and developed a YouTube.com homepage using HTML and CSS, focusing on layout design, responsiveness, and maintaining visual similarity to the original platform.',
