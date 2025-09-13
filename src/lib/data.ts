@@ -1,6 +1,6 @@
 
 import type { Project, Skill, Post } from './types';
-import { Code, Database, Wind, Bot, GitBranch, Cpu, Briefcase, PenTool, LayoutTemplate, Link, Github, Smartphone } from 'lucide-react';
+import { Code, Database, Wind, Bot, GitBranch, Cpu, Briefcase, PenTool, LayoutTemplate, Link, Github, Smartphone, Linkedin } from 'lucide-react';
 
 export const skills: Skill[] = [
   { name: 'Python', icon: Code },
@@ -39,6 +39,7 @@ export const projects: Project[] = [
     description: 'Designed and built an Android app using Java that fetches weather forecasts from an API, providing users with up-to-date weather information.',
     image: '',
     tags: ['Android', 'Java', 'API'],
+    repoUrl: 'https://github.com/Swapnilp011/E-cell-website',
   },
 ];
 
@@ -80,5 +81,5 @@ export const posts: Post[] = [
 
 export const socialLinks = [
     { name: 'GitHub', icon: Github, url: 'https://github.com/Swapnilp011' },
-    { name: 'LinkedIn', icon: Briefcase, url: 'https://www.linkedin.com/in/swapnilp011/' }
+    { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/swapnilp011/' }
 ];
