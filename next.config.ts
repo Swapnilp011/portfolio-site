@@ -15,6 +15,12 @@ const nextConfig: NextConfig = {
         hostname: 'raw.githubusercontent.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.mgmtech.org',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

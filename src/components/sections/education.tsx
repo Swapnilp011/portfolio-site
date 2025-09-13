@@ -1,4 +1,4 @@
-import { GraduationCap } from 'lucide-react';
+import Image from 'next/image';
 import {
   Card,
   CardContent,
@@ -22,8 +22,13 @@ export default function Education() {
         <div className="max-w-2xl mx-auto">
           <Card className="shadow-lg">
             <CardHeader className="flex flex-row items-start gap-4">
-              <div className="bg-primary/10 p-3 rounded-full">
-                <GraduationCap className="w-8 h-8 text-primary" />
+              <div className="relative w-20 h-20">
+                <Image
+                  src="https://cdn.mgmtech.org/static/mgmu.ac.in/assets/images/LogoMGM.svg"
+                  alt="MGM University Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <div>
                 <CardTitle className="font-headline text-2xl">
