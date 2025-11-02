@@ -19,6 +19,7 @@ export const projects: Project[] = [
     description: 'Study Gen Hack is an AI-driven learning platform that personalizes study plans based on a learner’s goals, skills, and schedule. It was developed during a 36-hour international hackathon. The platform transforms notes and books into tailored, interactive, and multilingual study tools. Build a full-stack solution using a modern tech stack including Next.js, Tailwind CSS. The app uses Firebase for data and authentication, and Vercel for Hosting.',
     image: '',
     tags: ['Next.js', 'AI', 'Firebase', 'Tailwind CSS', 'Full-stack'],
+    liveUrl: 'https://studygenhack.vercel.app/',
   },
   {
     title: 'E-Cell IICT MGMU Website',
