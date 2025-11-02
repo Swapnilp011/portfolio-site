@@ -1,3 +1,4 @@
+
 import ContactForm from './contact-form';
 import { Mail, Phone } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -14,11 +15,11 @@ export default function Contact() {
         </div>
         <div className="max-w-xl mx-auto">
             <ContactForm />
-            <div className="mt-8 space-y-4">
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Card className="shadow-lg">
-                <CardContent className="pt-6">
-                  <div className="flex items-center justify-center gap-4 text-muted-foreground">
-                      <Mail className="h-5 w-5 text-primary" />
+                <CardContent className="p-4">
+                  <div className="flex items-center justify-center gap-3 text-sm text-muted-foreground">
+                      <Mail className="h-4 w-4 text-primary" />
                       <a href="mailto:swapnildpawar011@gmail.com" className="hover:text-primary transition-colors">
                           swapnildpawar011@gmail.com
                       </a>
@@ -26,9 +27,9 @@ export default function Contact() {
                 </CardContent>
               </Card>
               <Card className="shadow-lg">
-                <CardContent className="pt-6">
-                  <div className="flex items-center justify-center gap-4 text-muted-foreground">
-                      <Phone className="h-5 w-5 text-primary" />
+                <CardContent className="p-4">
+                  <div className="flex items-center justify-center gap-3 text-sm text-muted-foreground">
+                      <Phone className="h-4 w-4 text-primary" />
                       <span>+91 7387336071</span>
                   </div>
                 </CardContent>
