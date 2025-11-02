@@ -40,6 +40,42 @@ export const projects: Project[] = [
 
 export const posts: Post[] = [
     {
+        slug: 'edusity-is-live',
+        title: 'Edusity is Live! – My Latest Web Development Project',
+        date: '2025-10-16',
+        author: 'Swapnil Pawar',
+        image: '',
+        excerpt: 'I’m excited to share my recent project, Edusity, a modern educational platform designed to provide a smooth, interactive, and user-friendly experience for students and learners.',
+        content: `
+<p>I’m excited to share my recent project, Edusity, a modern educational platform designed to provide a smooth, interactive, and user-friendly experience for students and learners. ✨</p>
+<h3 class="font-headline text-xl font-semibold mt-6 mb-3">Key Features:</h3>
+<ul class="list-disc list-inside space-y-2 my-4">
+    <li><strong>Interactive Navigation:</strong> Smooth scrolling and quick access to all sections.</li>
+    <li><strong>Programs & Courses:</strong> Organized section highlighting all offerings.</li>
+    <li><strong>Campus Gallery:</strong> Visual showcase of campus facilities.</li>
+    <li><strong>Testimonials:</strong> Real feedback section for authenticity.</li>
+    <li><strong>Contact Form & Video Player:</strong> Integrated interactive components for better engagement.</li>
+</ul>
+<h3 class="font-headline text-xl font-semibold mt-6 mb-3">Tech & Tools I Used:</h3>
+<ul class="list-disc list-inside space-y-2 my-4">
+    <li><strong>Frontend:</strong> React.js with Vite</li>
+    <li><strong>Styling:</strong> CSS modules for modular design</li>
+    <li><strong>Smooth Scrolling:</strong> react-scroll for seamless navigation</li>
+    <li><strong>Deployment:</strong> Hosted on Vercel for fast, reliable access</li>
+</ul>
+<h3 class="font-headline text-xl font-semibold mt-6 mb-3">Challenges & Learning Experience:</h3>
+<ul class="list-disc list-inside space-y-2 my-4">
+    <li>Deployed the project on Linux-based servers, solving case-sensitive import issues.</li>
+    <li>Learned how to handle React hooks, component reusability, and state management efficiently.</li>
+    <li>Managed responsive design for both desktop and mobile users.</li>
+</ul>
+<p>I wanted to create a hands-on project that demonstrates my skills in React and front-end development, while also solving real-world problems like interactive course exploration and user-friendly navigation.</p>
+<p class="mt-6">🔗 Check it live: <a href="https://edusity-project-one.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://edusity-project-one.vercel.app/</a></p>
+<p>🔗 View code on GitHub: <a href="https://github.com/Swapnilp011/Edusity-project" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://github.com/Swapnilp011/Edusity-project</a></p>
+<p>I’m looking forward to feedback and suggestions from the community to make Edusity even better! 🙌</p>
+        `,
+    },
+    {
         slug: 'sunhacks-hackathon-2k25',
         title: 'My Experience at Sunhacks Hackathon 2K25 with StudyGenHack',
         date: '2025-08-24',
@@ -139,7 +175,7 @@ export const posts: Post[] = [
 <p>This project was a great learning experience in mobile development, handling asynchronous network requests, and managing application state in an Android environment.</p>
         `,
     }
-];
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export const socialLinks = [
     { name: 'GitHub', icon: Github, url: 'https://github.com/Swapnilp011' },
