@@ -29,6 +29,14 @@ export const projects: Project[] = [
     liveUrl: 'https://ieee-iict.vercel.app/',
   },
   {
+    title: 'Edusity',
+    description: 'Edusity is a modern educational platform designed to provide a smooth, interactive, and user-friendly experience for students and learners. This project demonstrates skills in React and front-end development, while also solving real-world problems like interactive course exploration and user-friendly navigation.',
+    image: '',
+    tags: ['React.js', 'Vite', 'Frontend', 'EdTech'],
+    liveUrl: 'https://edusity-project-one.vercel.app/',
+    repoUrl: 'https://github.com/Swapnilp011/Edusity-project',
+  },
+  {
     title: 'E-Cell IICT MGMU Website',
     description: 'Developed a full-stack web application for the E-Cell (Entrepreneurship Cell) website using Next.js, React, and TypeScript, and deployed it on Vercel for fast and scalable hosting. Implemented secure authentication and profile management with Firebase Authentication and Firestore to ensure reliable data handling. Designed a modern, responsive UI with Tailwind CSS and ShadCN, enabling the platform to actively publish updates and manage E-Cell content for students and organizers.',
     image: '',
