@@ -14,22 +14,26 @@ export default function Contact() {
         </div>
         <div className="max-w-xl mx-auto">
             <ContactForm />
-            <Card className="mt-8 shadow-lg">
-              <CardContent className="pt-6">
-                <div className="text-center text-muted-foreground space-y-4">
-                    <div className="flex items-center justify-center gap-4">
-                        <Mail className="h-5 w-5 text-primary" />
-                        <a href="mailto:swapnildpawar011@gmail.com" className="hover:text-primary transition-colors">
-                            swapnildpawar011@gmail.com
-                        </a>
-                    </div>
-                    <div className="flex items-center justify-center gap-4">
-                        <Phone className="h-5 w-5 text-primary" />
-                        <span>+91 7387336071</span>
-                    </div>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="mt-8 space-y-4">
+              <Card className="shadow-lg">
+                <CardContent className="pt-6">
+                  <div className="flex items-center justify-center gap-4 text-muted-foreground">
+                      <Mail className="h-5 w-5 text-primary" />
+                      <a href="mailto:swapnildpawar011@gmail.com" className="hover:text-primary transition-colors">
+                          swapnildpawar011@gmail.com
+                      </a>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="shadow-lg">
+                <CardContent className="pt-6">
+                  <div className="flex items-center justify-center gap-4 text-muted-foreground">
+                      <Phone className="h-5 w-5 text-primary" />
+                      <span>+91 7387336071</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
         </div>
       </div>
     </section>
