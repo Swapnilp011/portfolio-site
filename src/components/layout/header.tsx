@@ -5,6 +5,7 @@ import { Menu, Code2, Download } from 'lucide-react';
 
 const navLinks = [
   { href: '/#projects', label: 'Projects' },
+  { href: '/#experience', label: 'Experience' },
   { href: '/#skills', label: 'Skills' },
   { href: '/#education', label: 'Education' },
   { href: '/blog', label: 'Blog' },

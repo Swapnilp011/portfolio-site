@@ -1,5 +1,5 @@
 
-import type { Project, Skill, Post } from './types';
+import type { Project, Skill, Post, Experience } from './types';
 import { Code, Database, Wind, Bot, GitBranch, Cpu, Briefcase, PenTool, LayoutTemplate, Link, Github, Smartphone, Linkedin } from 'lucide-react';
 
 export const skills: Skill[] = [
@@ -44,6 +44,20 @@ export const projects: Project[] = [
     liveUrl: 'https://e-cell-iictmgmu-website.vercel.app/',
     repoUrl: 'https://github.com/Swapnilp011/E-cell-website',
   },
+];
+
+export const experience: Experience[] = [
+    {
+        title: 'Software Development Intern',
+        company: 'InnovateTech',
+        period: 'Jun 2024 - Aug 2024',
+        location: 'Remote',
+        description: [
+            'Contributed to the development of a new client-facing web application using React and TypeScript.',
+            'Collaborated with senior developers to implement new features and fix bugs.',
+            'Participated in daily stand-ups and agile development processes.',
+        ],
+    },
 ];
 
 export const posts: Post[] = [

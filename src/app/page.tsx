@@ -2,6 +2,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Hero from '@/components/sections/hero';
 import Projects from '@/components/sections/projects';
+import Experience from '@/components/sections/experience';
 import Skills from '@/components/sections/skills';
 import Education from '@/components/sections/education';
 import BlogPreview from '@/components/sections/blog-preview';
@@ -14,6 +15,7 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <Projects />
+        <Experience />
         <Skills />
         <Education />
         <BlogPreview />
