@@ -34,7 +34,7 @@ export const projects: Project[] = [
     image: '',
     tags: ['React.js', 'Vite', 'Frontend', 'EdTech'],
     liveUrl: 'https://edusity-demo.vercel.app/',
-    repoUrl: 'https://github.com/Swapnilp011/Edusity-project',
+    repoUrl: 'https://github.com/Swapnilp011/Edusity',
   },
   {
     title: 'E-Cell IICT MGMU Website',
@@ -71,7 +71,7 @@ export const posts: Post[] = [
     <li><strong>Smooth Scrolling:</strong> react-scroll for seamless navigation</li>
     <li><strong>Deployment:</strong> Hosted on Vercel for fast, reliable access</li>
 </ul>
-<h3 class.="font-headline text-xl font-semibold mt-6 mb-3">Challenges & Learning Experience:</h3>
+<h3 class="font-headline text-xl font-semibold mt-6 mb-3">Challenges & Learning Experience:</h3>
 <ul class="list-disc list-inside space-y-2 my-4">
     <li>Deployed the project on Linux-based servers, solving case-sensitive import issues.</li>
     <li>Learned how to handle React hooks, component reusability, and state management efficiently.</li>
@@ -79,7 +79,7 @@ export const posts: Post[] = [
 </ul>
 <p>I wanted to create a hands-on project that demonstrates my skills in React and front-end development, while also solving real-world problems like interactive course exploration and user-friendly navigation.</p>
 <p class="mt-6">🔗 Check it live: <a href="https://edusity-project-one.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://edusity-project-one.vercel.app/</a></p>
-<p>🔗 View code on GitHub: <a href="https://github.com/Swapnilp011/Edusity-project" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://github.com/Swapnilp011/Edusity-project</a></p>
+<p>🔗 View code on GitHub: <a href="https://github.com/Swapnilp011/Edusity" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://github.com/Swapnilp011/Edusity</a></p>
 <p>I’m looking forward to feedback and suggestions from the community to make Edusity even better! 🙌</p>
         `,
     },
