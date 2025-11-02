@@ -40,6 +40,22 @@ export const projects: Project[] = [
 
 export const posts: Post[] = [
     {
+        slug: 'supernova-cosmobolt-robo-race-winner',
+        title: 'Our Victory at the SUPERNOVA-COSMOBOLT Robo Race!',
+        date: '2024-09-01',
+        author: 'Swapnil Pawar',
+        image: '',
+        excerpt: 'A recap of our victory at the SUPERNOVA-COSMOBOLT Robo Race at MGM University, where our team, Mortal Engine, secured 1st place.',
+        content: `
+<p>Thrilled to share that Team Mortal Engine secured 1st Position (Winner) at the SUPERNOVA-COSMOBOLT Robo Race, organized by MGMU School of Engineering and Technology at MGM University, Chhatrapati Sambhajinagar. 🏆🤖</p>
+<p>This competition truly tested our teamwork, creativity, and design skills — and we’re proud to have come out on top! 💡✨</p>
+<p>A big thank you to Parminder Kaur Dhingra ma’am and the organizers for hosting such a wonderful event, and kudos to all the participating teams for making the race so inspiring. 🙌</p>
+<h3 class="font-headline text-xl font-semibold mt-6 mb-3">Special Thanks</h3>
+<p>Special thanks to all our supportive faculty members: Chetana Bhagat, Madhuri Kawarkhe, Udhav Parbhane — your guidance and encouragement made this achievement possible. 🙏</p>
+<p>Special shoutout to my amazing teammates Asjad Pathan, Musaddique Khan, and Farooqui Furqan Ahmed — this victory was a real team effort! 💪</p>
+        `,
+    },
+    {
         slug: 'innovista-2025-ieee-website',
         title: 'Our Experience at INNOVISTA 2025: Building the New IEEE IICT Website',
         date: '2024-08-28',
