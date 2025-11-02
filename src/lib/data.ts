@@ -40,6 +40,30 @@ export const projects: Project[] = [
 
 export const posts: Post[] = [
     {
+        slug: 'innovista-2025-ieee-website',
+        title: 'Our Experience at INNOVISTA 2025: Building the New IEEE IICT Website',
+        date: '2024-08-28',
+        author: 'Swapnil Pawar',
+        image: '',
+        excerpt: 'A recap of our experience at the INNOVISTA 2025 hackathon, where we built the new official website for the IEEE IICT Student Branch at MGM University.',
+        content: `
+<p>I'm thrilled to share that my teammate Mateen Shadab and I participated in INNOVISTA 2025, a UI/UX & Development Challenge organized by the @IEEE Student Branch, MGMU Institute of Information & Communication Technology – MGM University. It was an incredible experience to apply our skills and contribute to the community. 💡💻</p>
+<p>As part of the hackathon, we successfully developed and launched the new official website for the IEEE IICT Student Branch 🌐.</p>
+<h3 class="font-headline text-xl font-semibold mt-6 mb-3">A Functional & Beautiful Hub</h3>
+<p>We focused on creating a platform that not only looks great 🎨 but is also highly functional ⚙️. The new website serves as a central hub for everything related to the student branch, including:</p>
+<ul class="list-disc list-inside space-y-2 my-4">
+    <li><strong>About Us:</strong> Learn about the history, mission, and vision of the IEEE Student Branch.</li>
+    <li><strong>Events:</strong> Stay updated on upcoming events and browse through our past workshops and competitions.</li>
+    <li><strong>Gallery:</strong> A glimpse into the vibrant community with photos from our various events.</li>
+    <li><strong>Team:</strong> Get to know the dedicated individuals who lead the student branch.</li>
+    <li><strong>Contact Us:</strong> Easy access for anyone looking to connect with the team.</li>
+</ul>
+<p>This project was a true test of our skills in merging innovation with a practical user experience. 💪 We’re incredibly proud of what we accomplished and grateful for the opportunity. 🙌</p>
+<p>A huge thank you to everyone who made this event possible, especially Prof. Dr. Sharvari Tamane and Ms. VIJAYA AHIRE, and a massive shoutout to the entire IEEE team at MGM University for their fantastic support and for organizing such a well-run and impactful event. 🎉</p>
+<p class="mt-6">🔗 Check out the new website here: <a href="https://ieee-iict.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://ieee-iict.vercel.app/</a></p>
+        `,
+    },
+    {
         slug: 'youtube-clone-html-css',
         title: 'Building the YouTube Homepage with HTML & CSS',
         date: '2024-08-15',
