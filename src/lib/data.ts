@@ -33,7 +33,7 @@ export const projects: Project[] = [
     description: 'Edusity is a modern educational platform designed to provide a smooth, interactive, and user-friendly experience for students and learners. This project demonstrates skills in React and front-end development, while also solving real-world problems like interactive course exploration and user-friendly navigation.',
     image: '',
     tags: ['React.js', 'Vite', 'Frontend', 'EdTech'],
-    liveUrl: 'https://edusity-project-one.vercel.app/',
+    liveUrl: 'https://edusity-demo.vercel.app/',
     repoUrl: 'https://github.com/Swapnilp011/Edusity-project',
   },
   {
@@ -71,7 +71,7 @@ export const posts: Post[] = [
     <li><strong>Smooth Scrolling:</strong> react-scroll for seamless navigation</li>
     <li><strong>Deployment:</strong> Hosted on Vercel for fast, reliable access</li>
 </ul>
-<h3 class="font-headline text-xl font-semibold mt-6 mb-3">Challenges & Learning Experience:</h3>
+<h3 class.="font-headline text-xl font-semibold mt-6 mb-3">Challenges & Learning Experience:</h3>
 <ul class="list-disc list-inside space-y-2 my-4">
     <li>Deployed the project on Linux-based servers, solving case-sensitive import issues.</li>
     <li>Learned how to handle React hooks, component reusability, and state management efficiently.</li>
