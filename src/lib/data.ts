@@ -28,19 +28,6 @@ export const projects: Project[] = [
     liveUrl: 'https://e-cell-iictmgmu-website.vercel.app/',
     repoUrl: 'https://github.com/Swapnilp011/E-cell-website',
   },
-  {
-    title: 'YouTube Clone Homepage',
-    description: 'Designed and developed a YouTube.com homepage using HTML and CSS, focusing on layout design, responsiveness, and maintaining visual similarity to the original platform.',
-    image: '',
-    tags: ['HTML', 'CSS', 'Frontend'],
-  },
-  {
-    title: 'Weather Forecasting App',
-    description: 'Designed and built an Android app using Java that fetches weather forecasts from an API, providing users with up-to-date weather information.',
-    image: '',
-    tags: ['Android', 'Java', 'API'],
-    repoUrl: 'https://github.com/Swapnilp011/E-cell-website',
-  },
 ];
 
 export const posts: Post[] = [
