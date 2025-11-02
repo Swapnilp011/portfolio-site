@@ -48,14 +48,14 @@ export const projects: Project[] = [
 
 export const experience: Experience[] = [
     {
-        title: 'Software Development Intern',
-        company: 'InnovateTech',
-        period: 'Jun 2024 - Aug 2024',
+        title: 'Web Development Intern',
+        company: 'INFINOVA TECHNOLOGIES',
+        period: 'Sept 2025 – Present',
         location: 'Remote',
         description: [
-            'Contributed to the development of a new client-facing web application using React and TypeScript.',
-            'Collaborated with senior developers to implement new features and fix bugs.',
-            'Participated in daily stand-ups and agile development processes.',
+            'Developed responsive web features using React, JSX, and CSS.',
+            'Created and implemented Figma-based UI designs.',
+            'Debugged and optimized front-end performance.',
         ],
     },
 ];
