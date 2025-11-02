@@ -39,8 +39,8 @@ const Stars = () => {
       <svg className="h-full w-full">
         <defs>
           <radialGradient id="star-gradient" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="rgba(255, 255, 255, 0.8)" />
-            <stop offset="100%" stopColor="rgba(255, 255, 255, 0)" />
+            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
           </radialGradient>
         </defs>
         {stars.map((star, i) => (
