@@ -15,6 +15,13 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
+    title: 'IEEE IICT Student Branch Website',
+    description: 'As part of the INNOVISTA 2025 UI/UX & Development Challenge, we developed the new official website for the IEEE IICT Student Branch at MGM University. The site serves as a central hub for members, featuring information about the branch, upcoming events, a gallery of past activities, team member profiles, and a contact section. Our focus was on creating a highly functional and visually appealing platform to support the student community.',
+    image: '',
+    tags: ['UI/UX', 'Web Development', 'Next.js', 'IEEE'],
+    liveUrl: 'https://ieee-iict.vercel.app/',
+  },
+  {
     title: 'Study Gen Hack',
     description: 'Study Gen Hack is an AI-driven learning platform that personalizes study plans based on a learner’s goals, skills, and schedule. It was developed during a 36-hour international hackathon. The platform transforms notes and books into tailored, interactive, and multilingual study tools. Build a full-stack solution using a modern tech stack including Next.js, Tailwind CSS. The app uses Firebase for data and authentication, and Vercel for Hosting.',
     image: '',
