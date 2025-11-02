@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -7,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 import { useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { Stars } from '@/components/ui/stars';
 
 export default function Hero() {
   const { toast } = useToast();
@@ -19,8 +19,9 @@ export default function Hero() {
   }, [toast]);
 
   return (
-    <section id="home" className="container flex flex-col md:flex-row items-center justify-center text-center md:text-left min-h-[calc(100vh-56px)] gap-12 py-16">
-      <div className="md:w-1/2 flex flex-col items-center md:items-start gap-4">
+    <section id="home" className="relative container flex flex-col md:flex-row items-center justify-center text-center md:text-left min-h-[calc(100vh-56px)] gap-12 py-16">
+      <Stars />
+      <div className="md:w-1/2 flex flex-col items-center md:items-start gap-4 z-10">
         <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
           Hi, I&apos;m Swapnil Pawar
         </h1>
@@ -33,7 +34,7 @@ export default function Hero() {
           </Button>
         </div>
       </div>
-      <div className="md:w-1/2 flex justify-center">
+      <div className="md:w-1/2 flex justify-center z-10">
         <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
            <Image
             src="https://raw.githubusercontent.com/Swapnilp011/profile-pictures/main/WhatsApp%20Image%202025-08-26%20at%2020.01.56_ab8a3dea.jpg"
