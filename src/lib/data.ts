@@ -1,6 +1,6 @@
 
 import type { Project, Skill, Post, Experience } from './types';
-import { Code, Database, Wind, Bot, GitBranch, Cpu, Briefcase, PenTool, LayoutTemplate, Link, Github, Smartphone, Linkedin } from 'lucide-react';
+import { Code, Database, Wind, Bot, GitBranch, Cpu, Briefcase, PenTool, LayoutTemplate, Link, Github, Smartphone, Linkedin, Instagram } from 'lucide-react';
 
 export const skills: Skill[] = [
   { name: 'Python', icon: Code },
@@ -201,5 +201,6 @@ export const posts: Post[] = [
 
 export const socialLinks = [
     { name: 'GitHub', icon: Github, url: 'https://github.com/Swapnilp011' },
-    { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/swapnilp011/' }
+    { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/swapnilp011/' },
+    { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/swapnilp011' },
 ];
