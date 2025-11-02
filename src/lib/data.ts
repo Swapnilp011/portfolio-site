@@ -40,6 +40,33 @@ export const projects: Project[] = [
 
 export const posts: Post[] = [
     {
+        slug: 'sunhacks-hackathon-2k25',
+        title: 'My Experience at Sunhacks Hackathon 2K25 with StudyGenHack',
+        date: '2025-08-24',
+        author: 'Swapnil Pawar',
+        image: '',
+        excerpt: 'A recap of my experience at Sunhacks Hackathon-2K25, where I worked on StudyGenHack, an AI-driven learning platform.',
+        content: `
+<p>🚀 Excited to share that I recently participated in Sunhacks Hackathon-2K25, a 36-hour international hackathon organized by Sandip University, Nashik!</p>
+<p>During the hackathon, I worked on StudyGenHack, an AI-driven learning platform. The platform:</p>
+<ul class="list-disc list-inside space-y-2 my-4">
+    <li>Personalizes study plans based on a learner’s goals, skills, and schedule.</li>
+    <li>Transforms notes & books into interactive, multilingual study tools.</li>
+    <li>Makes learning more adaptive and engaging for students.</li>
+</ul>
+<h3 class="font-headline text-xl font-semibold mt-6 mb-3">Tech Stack</h3>
+<p>We used a modern tech stack to bring this project to life:</p>
+<ul class="list-disc list-inside space-y-2 my-4">
+    <li><strong>Full-stack Development:</strong> Next.js + Tailwind CSS</li>
+    <li><strong>Backend:</strong> Firebase for authentication & data management</li>
+    <li><strong>Deployment:</strong> Vercel for scalable hosting</li>
+</ul>
+<p>It was an amazing experience to brainstorm, build, and innovate within 36 hours while collaborating with brilliant minds. 🌟</p>
+<p>A special thanks to Madhuri Kawarkhe for her valuable guidance and mentorship throughout this journey. Grateful to Sandip University for organizing such a global platform for innovation. Looking forward to participating in more hackathons and taking this project further!</p>
+<p class="mt-6">🔗 Check out the project here: <a href="https://studygenhack.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://studygenhack.vercel.app/</a></p>
+        `,
+    },
+    {
         slug: 'supernova-cosmobolt-robo-race-winner',
         title: 'Our Victory at the SUPERNOVA-COSMOBOLT Robo Race!',
         date: '2024-09-01',
