@@ -61,7 +61,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'brandlogos.net',
+        hostname: 'docs.flutter.dev',
         port: '',
         pathname: '/**',
       }
