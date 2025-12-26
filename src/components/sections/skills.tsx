@@ -15,7 +15,7 @@ export default function Skills() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
           {skills.map((skill) => (
             <Card key={skill.name} className="p-4 flex flex-col items-center justify-center gap-4 transition-transform duration-300 hover:scale-105 hover:bg-secondary shadow-md hover:shadow-lg">
-              <div className="relative w-16 h-16">
+              <div className="relative w-20 h-20">
                 {skill.logo ? (
                   <Image
                     src={skill.logo}
