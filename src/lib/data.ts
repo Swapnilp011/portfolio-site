@@ -3,7 +3,7 @@ import type { Project, Skill, Post, Experience } from './types';
 import { GitBranch, Link, Github, Smartphone, Linkedin, Instagram } from 'lucide-react';
 
 export const skills: Skill[] = [
-  { name: 'Python', logo: 'https://www.python.org/static/img/python-logo.png' },
+  { name: 'Python', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png' },
   { name: 'C++', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg' },
   { name: 'Java', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/250px-Java_programming_language_logo.svg.png' },
   { name: 'HTML5', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/330px-HTML5_logo_and_wordmark.svg.png' },
