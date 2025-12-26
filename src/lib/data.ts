@@ -11,7 +11,7 @@ export const skills: Skill[] = [
   { name: 'JavaScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png' },
   { name: 'DSA', logo: '', icon: GitBranch },
   { name: 'SQL', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png' },
-  { name: 'Flutter', logo: 'https://cdn.simpleicons.org/flutter/02569B' },
+  { name: 'Flutter', logo: 'https://images.seeklogo.com/logo-png/34/1/flutter-logo-png_seeklogo-349577.png' },
 ];
 
 export const projects: Project[] = [
@@ -213,4 +213,5 @@ export const socialLinks = [
 
 
     
+
 
