@@ -54,7 +54,7 @@ export default function Header() {
                       {link.label}
                     </Link>
                   ))}
-                  <a href="https://drive.google.com/file/d/1xMiVn35fJOU4A-D797Wb2gwa8MJLc1x2/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-lg font-medium flex items-center">
+                  <a href="https://drive.google.com/file/d/1ZA6gayg6r7hzXvbsyZiR1dgzyWhL5j63/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-lg font-medium flex items-center">
                     Download CV <Download className="ml-2 h-4 w-4" />
                   </a>
                   <Link href="/#contact" className="text-lg font-medium">
@@ -67,7 +67,7 @@ export default function Header() {
 
           <nav className="flex items-center gap-4">
              <Button variant="outline" asChild>
-                <a href="https://drive.google.com/file/d/1xMiVn35fJOU4A-D797Wb2gwa8MJLc1x2/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1ZA6gayg6r7hzXvbsyZiR1dgzyWhL5j63/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                     Download CV <Download className="ml-2 h-4 w-4" />
                 </a>
             </Button>
