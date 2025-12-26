@@ -7,7 +7,7 @@ export const skills: Skill[] = [
   { name: 'C++', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg' },
   { name: 'Java', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/250px-Java_programming_language_logo.svg.png' },
   { name: 'HTML5', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/330px-HTML5_logo_and_wordmark.svg.png' },
-  { name: 'CSS3', logo: 'https://cdn.simpleicons.org/css3/1572B6' },
+  { name: 'CSS3', logo: 'https://miro.medium.com/1*Aenej4dxqEZ9j7zsI9pSnw.png' },
   { name: 'JavaScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png' },
   { name: 'DSA', logo: '', icon: GitBranch },
   { name: 'SQL', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png' },
@@ -215,3 +215,6 @@ export const socialLinks = [
     
 
 
+
+
+    
