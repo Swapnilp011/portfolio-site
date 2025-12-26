@@ -58,11 +58,19 @@ const nextConfig: NextConfig = {
         hostname: 'miro.medium.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'brandlogos.net',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
 };
 
 export default nextConfig;
+
+    
 
     
