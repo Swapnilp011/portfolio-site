@@ -5,7 +5,7 @@ import { GitBranch, Link, Github, Smartphone, Linkedin, Instagram } from 'lucide
 export const skills: Skill[] = [
   { name: 'Python', logo: 'https://www.python.org/static/img/python-logo.png' },
   { name: 'C++', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg' },
-  { name: 'Java', logo: 'https://cdn.simpleicons.org/java/007396' },
+  { name: 'Java', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/250px-Java_programming_language_logo.svg.png' },
   { name: 'HTML5', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/330px-HTML5_logo_and_wordmark.svg.png' },
   { name: 'CSS3', logo: 'https://cdn.simpleicons.org/css3/1572B6' },
   { name: 'JavaScript', logo: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     image: '',
     tags: ['React.js', 'Vite', 'Frontend', 'EdTech'],
     liveUrl: 'https://edusity-demo.vercel.app/',
-    repoUrl: 'https://github.com/Swapnilp011/Edusity.git',
+    repoUrl: 'https://github.com/Swapnilp011/Edusity',
   },
   {
     title: 'E-Cell IICT MGMU Website',
@@ -207,3 +207,6 @@ export const socialLinks = [
     { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/swapnilp011/' },
     { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/swapnilp011' },
 ];
+
+
+    
