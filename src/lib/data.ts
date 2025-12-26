@@ -1,16 +1,17 @@
 
 import type { Project, Skill, Post, Experience } from './types';
-import { Code, Database, Wind, Bot, GitBranch, Cpu, Briefcase, PenTool, LayoutTemplate, Link, Github, Smartphone, Linkedin, Instagram } from 'lucide-react';
+import { GitBranch, Link, Github, Smartphone, Linkedin, Instagram } from 'lucide-react';
 
 export const skills: Skill[] = [
-  { name: 'Python', icon: Code },
-  { name: 'C/C++', icon: Code },
-  { name: 'Java', icon: Code },
-  { name: 'HTML/CSS', icon: Code },
-  { name: 'JavaScript', icon: Code },
-  { name: 'DSA', icon: GitBranch },
-  { name: 'SQL', icon: Database },
-  { name: 'Flutter', icon: Smartphone },
+  { name: 'Python', logo: 'https://cdn.simpleicons.org/python/3776AB' },
+  { name: 'C++', logo: 'https://cdn.simpleicons.org/cplusplus/00599C' },
+  { name: 'Java', logo: 'https://cdn.simpleicons.org/java/007396' },
+  { name: 'HTML5', logo: 'https://cdn.simpleicons.org/html5/E34F26' },
+  { name: 'CSS3', logo: 'https://cdn.simpleicons.org/css3/1572B6' },
+  { name: 'JavaScript', logo: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
+  { name: 'DSA', logo: '', icon: GitBranch },
+  { name: 'SQL', logo: 'https://cdn.simpleicons.org/mysql/4479A1' },
+  { name: 'Flutter', logo: 'https://cdn.simpleicons.org/flutter/02569B' },
 ];
 
 export const projects: Project[] = [

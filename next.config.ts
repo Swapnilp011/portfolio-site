@@ -27,6 +27,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.infinovaglobal.org',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.simpleicons.org',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
