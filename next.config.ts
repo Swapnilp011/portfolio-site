@@ -39,6 +39,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.python.org',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
