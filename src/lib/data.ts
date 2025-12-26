@@ -34,7 +34,7 @@ export const projects: Project[] = [
     image: '',
     tags: ['React.js', 'Vite', 'Frontend', 'EdTech'],
     liveUrl: 'https://edusity-demo.vercel.app/',
-    repoUrl: 'https://github.com/Swapnilp011/Edusity',
+    repoUrl: 'https://github.com/Swapnilp011/Edusity.git',
   },
   {
     title: 'E-Cell IICT MGMU Website',
@@ -50,6 +50,8 @@ export const experience: Experience[] = [
     {
         title: 'Web Development Intern',
         company: 'INFINOVA TECHNOLOGIES',
+        companyLogo: 'https://www.infinovaglobal.org/TECH_Logo.svg',
+        companyUrl: 'https://www.infinovaglobal.org/',
         period: 'Sept 2025 – Present',
         location: 'Remote',
         description: [

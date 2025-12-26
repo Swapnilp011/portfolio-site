@@ -27,6 +27,8 @@ export type Post = {
 export type Experience = {
     title: string;
     company: string;
+    companyLogo?: string;
+    companyUrl?: string;
     period: string;
     location: string;
     description: string[];

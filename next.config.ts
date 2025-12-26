@@ -21,6 +21,12 @@ const nextConfig: NextConfig = {
         hostname: 'cdn.mgmtech.org',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.infinovaglobal.org',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
