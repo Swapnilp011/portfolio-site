@@ -6,7 +6,7 @@ export const skills: Skill[] = [
   { name: 'Python', logo: 'https://www.python.org/static/img/python-logo.png' },
   { name: 'C++', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg' },
   { name: 'Java', logo: 'https://cdn.simpleicons.org/java/007396' },
-  { name: 'HTML5', logo: 'https://cdn.simpleicons.org/html5/E34F26' },
+  { name: 'HTML5', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/330px-HTML5_logo_and_wordmark.svg.png' },
   { name: 'CSS3', logo: 'https://cdn.simpleicons.org/css3/1572B6' },
   { name: 'JavaScript', logo: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
   { name: 'DSA', logo: '', icon: GitBranch },
