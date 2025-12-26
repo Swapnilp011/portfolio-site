@@ -8,7 +8,7 @@ export const skills: Skill[] = [
   { name: 'Java', logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/250px-Java_programming_language_logo.svg.png' },
   { name: 'HTML5', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/330px-HTML5_logo_and_wordmark.svg.png' },
   { name: 'CSS3', logo: 'https://cdn.simpleicons.org/css3/1572B6' },
-  { name: 'JavaScript', logo: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
+  { name: 'JavaScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png' },
   { name: 'DSA', logo: '', icon: GitBranch },
   { name: 'SQL', logo: 'https://cdn.simpleicons.org/mysql/4479A1' },
   { name: 'Flutter', logo: 'https://cdn.simpleicons.org/flutter/02569B' },
@@ -207,6 +207,9 @@ export const socialLinks = [
     { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/swapnilp011/' },
     { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/swapnilp011' },
 ];
+
+
+    
 
 
     
