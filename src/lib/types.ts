@@ -15,16 +15,6 @@ export type Project = {
   repoUrl?: string;
 };
 
-export type Post = {
-  slug: string;
-  title: string;
-  date: string;
-  author: string;
-  image: string;
-  excerpt: string;
-  content: string;
-};
-
 export type Experience = {
     title: string;
     company: string;

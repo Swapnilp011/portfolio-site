@@ -8,7 +8,6 @@ const navLinks = [
   { href: '/#experience', label: 'Experience' },
   { href: '/#skills', label: 'Skills' },
   { href: '/#education', label: 'Education' },
-  { href: '/blog', label: 'Blog' },
 ];
 
 export default function Header() {
