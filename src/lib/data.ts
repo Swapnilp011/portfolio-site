@@ -9,6 +9,7 @@ export const skills: Skill[] = [
   { name: 'HTML5', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/330px-HTML5_logo_and_wordmark.svg.png' },
   { name: 'CSS3', logo: 'https://miro.medium.com/1*Aenej4dxqEZ9j7zsI9pSnw.png' },
   { name: 'JavaScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png' },
+  { name: 'React', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
   { name: 'DSA', logo: '', icon: GitBranch },
   { name: 'SQL', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png' },
   { name: 'Flutter', logo: 'https://docs.flutter.dev/assets/images/branding/flutter/logo/default.svg' },
@@ -249,6 +250,7 @@ export const socialLinks = [
     
 
     
+
 
 
 
