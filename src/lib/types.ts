@@ -8,7 +8,7 @@ export type Skill = {
 
 export type Project = {
   title: string;
-  description: string;
+  description: string[];
   image: string;
   tags: string[];
   liveUrl?: string;

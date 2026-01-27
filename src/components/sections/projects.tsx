@@ -39,7 +39,11 @@ export default function Projects() {
                     <Badge key={tag} variant="secondary">{tag}</Badge>
                   ))}
                 </div>
-                <p className="text-muted-foreground">{project.description}</p>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                    {project.description.map((point, index) => (
+                        <li key={index}>{point}</li>
+                    ))}
+                </ul>
               </CardContent>
               <CardFooter className="flex justify-end gap-2">
                 {project.repoUrl && (

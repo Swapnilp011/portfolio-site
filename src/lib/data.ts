@@ -17,7 +17,12 @@ export const skills: Skill[] = [
 export const projects: Project[] = [
   {
     title: 'FairFare – AI-Powered Smart Budget Travel Assistant',
-    description: 'Developed a mobile-first web application using React.js and Firebase to help travelers avoid overspending and prevent "tourist tax" scams in real-time. Integrated Google Gemini API (gemini-1.5-flash) to build a "Fair Price Guardrail" engine that analyzes user expenses against hyperlocal economic data to flag overpriced services. Implemented Google Maps & Places API to provide context-aware, budget-friendly food and transport recommendations within a 500m radius of the user. Utilized Cloud Firestore for real-time data synchronization of travel budgets and itineraries across devices, deployed via Vercel for high availability.',
+    description: [
+        'Developed a mobile-first web application using React.js and Firebase to help travelers avoid overspending and prevent "tourist tax" scams in real-time.',
+        'Integrated Google Gemini API to build a "Fair Price Guardrail" engine that analyzes user expenses against hyperlocal economic data.',
+        'Implemented Google Maps & Places API to provide context-aware, budget-friendly food and transport recommendations.',
+        'Utilized Cloud Firestore for real-time data synchronization of travel budgets and itineraries across devices.'
+    ],
     image: '',
     tags: ['React.js', 'Firebase', 'Gemini API', 'Google Maps', 'AI'],
     liveUrl: 'https://fairfaretravel.vercel.app/',
@@ -25,21 +30,33 @@ export const projects: Project[] = [
   },
   {
     title: 'Study Gen Hack',
-    description: 'Study Gen Hack is an AI-driven learning platform that personalizes study plans based on a learner’s goals, skills, and schedule. It was developed during a 36-hour international hackathon. The platform transforms notes and books into tailored, interactive, and multilingual study tools. Build a full-stack solution using a modern tech stack including Next.js, Tailwind CSS. The app uses Firebase for data and authentication, and Vercel for Hosting.',
+    description: [
+        'Developed an AI-driven learning platform that personalizes study plans based on a learner’s goals, skills, and schedule.',
+        'Built during a 36-hour international hackathon, the platform transforms notes and books into tailored, interactive study tools.',
+        'Full-stack solution using Next.js, Tailwind CSS, Firebase for authentication/data, and Vercel for hosting.'
+    ],
     image: '',
     tags: ['Next.js', 'AI', 'Firebase', 'Tailwind CSS', 'Full-stack'],
     liveUrl: 'https://studygenhack.vercel.app/',
   },
   {
     title: 'IEEE IICT Student Branch Website',
-    description: 'As part of the INNOVISTA 2025 UI/UX & Development Challenge, we developed the new official website for the IEEE IICT Student Branch at MGM University. The site serves as a central hub for members, featuring information about the branch, upcoming events, a gallery of past activities, team member profiles, and a contact section. Our focus was on creating a highly functional and visually appealing platform to support the student community.',
+    description: [
+        'Developed the new official website for the IEEE IICT Student Branch at MGM University for the INNOVISTA 2025 UI/UX & Development Challenge.',
+        'The site serves as a central hub for members, featuring event information, galleries, team profiles, and contact details.',
+        'Focused on creating a highly functional and visually appealing platform to support the student community.'
+    ],
     image: '',
     tags: ['UI/UX', 'Web Development', 'Next.js', 'IEEE'],
     liveUrl: 'https://ieee-iict.vercel.app/',
   },
   {
     title: 'Edusity',
-    description: 'Edusity is a modern educational platform designed to provide a smooth, interactive, and user-friendly experience for students and learners. This project demonstrates skills in React and front-end development, while also solving real-world problems like interactive course exploration and user-friendly navigation.',
+    description: [
+        'Designed a modern educational platform for a smooth, interactive, and user-friendly experience for students.',
+        'This project demonstrates skills in React and front-end development.',
+        'Solves real-world problems like interactive course exploration and user-friendly navigation.'
+    ],
     image: '',
     tags: ['React.js', 'Vite', 'Frontend', 'EdTech'],
     liveUrl: 'https://edusity-demo.vercel.app/',
@@ -47,7 +64,11 @@ export const projects: Project[] = [
   },
   {
     title: 'E-Cell IICT MGMU Website',
-    description: 'Developed a full-stack web application for the E-Cell (Entrepreneurship Cell) website using Next.js, React, and TypeScript, and deployed it on Vercel for fast and scalable hosting. Implemented secure authentication and profile management with Firebase Authentication and Firestore to ensure reliable data handling. Designed a modern, responsive UI with Tailwind CSS and ShadCN, enabling the platform to actively publish updates and manage E-Cell content for students and organizers.',
+    description: [
+        'Developed a full-stack web application for the E-Cell website using Next.js, React, and TypeScript.',
+        'Implemented secure authentication and profile management with Firebase Authentication and Firestore.',
+        'Designed a modern, responsive UI with Tailwind CSS and ShadCN for content management.'
+    ],
     image: '',
     tags: ['Next.js', 'TypeScript', 'Firebase', 'Tailwind CSS', 'Full-stack'],
     liveUrl: 'https://e-cell-iictmgmu-website.vercel.app/',
@@ -228,5 +249,6 @@ export const socialLinks = [
     
 
     
+
 
 
