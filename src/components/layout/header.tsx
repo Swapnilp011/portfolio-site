@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Code2, Download } from 'lucide-react';
+import { Menu, Download } from 'lucide-react';
 
 const navLinks = [
   { href: '/#projects', label: 'Projects' },
@@ -16,7 +17,13 @@ export default function Header() {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Code2 className="h-6 w-6 text-primary" />
+            <Image
+              src="https://raw.githubusercontent.com/Swapnilp011/profile-pictures/main/profile%20logo.png"
+              alt="Swapnil Pawar Logo"
+              width={28}
+              height={28}
+              className="h-7 w-7"
+            />
             <span className="hidden font-bold sm:inline-block font-headline">
               Swapnil Pawar
             </span>
@@ -44,7 +51,13 @@ export default function Header() {
               </SheetTrigger>
               <SheetContent side="left">
                 <Link href="/" className="flex items-center space-x-2 mb-6">
-                  <Code2 className="h-6 w-6 text-primary" />
+                  <Image
+                    src="https://raw.githubusercontent.com/Swapnilp011/profile-pictures/main/profile%20logo.png"
+                    alt="Swapnil Pawar Logo"
+                    width={28}
+                    height={28}
+                    className="h-7 w-7"
+                  />
                   <span className="font-bold font-headline">Swapnil Pawar</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
