@@ -53,7 +53,7 @@ export const experience: Experience[] = [
         company: 'INFINOVA TECHNOLOGIES',
         companyLogo: 'https://www.infinovaglobal.org/TECH_Logo.svg',
         companyUrl: 'https://www.infinovaglobal.org/',
-        period: 'Sept 2025 – Present',
+        period: 'Oct 2025 – Dec 2025',
         location: 'Remote',
         description: [
             'Developed responsive web features using React, JSX, and CSS.',
@@ -220,3 +220,4 @@ export const socialLinks = [
     
 
     
+
