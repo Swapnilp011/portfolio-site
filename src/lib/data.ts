@@ -16,6 +16,14 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
+    title: 'FairFare – AI-Powered Smart Budget Travel Assistant',
+    description: 'Developed a mobile-first web application using React.js and Firebase to help travelers avoid overspending and prevent "tourist tax" scams in real-time. Integrated Google Gemini API (gemini-1.5-flash) to build a "Fair Price Guardrail" engine that analyzes user expenses against hyperlocal economic data to flag overpriced services. Implemented Google Maps & Places API to provide context-aware, budget-friendly food and transport recommendations within a 500m radius of the user. Utilized Cloud Firestore for real-time data synchronization of travel budgets and itineraries across devices, deployed via Vercel for high availability.',
+    image: '',
+    tags: ['React.js', 'Firebase', 'Gemini API', 'Google Maps', 'AI'],
+    liveUrl: 'https://fairfaretravel.vercel.app/',
+    repoUrl: 'https://github.com/Swapnilp011/FairFare',
+  },
+  {
     title: 'Study Gen Hack',
     description: 'Study Gen Hack is an AI-driven learning platform that personalizes study plans based on a learner’s goals, skills, and schedule. It was developed during a 36-hour international hackathon. The platform transforms notes and books into tailored, interactive, and multilingual study tools. Build a full-stack solution using a modern tech stack including Next.js, Tailwind CSS. The app uses Firebase for data and authentication, and Vercel for Hosting.',
     image: '',
@@ -220,4 +228,5 @@ export const socialLinks = [
     
 
     
+
 
