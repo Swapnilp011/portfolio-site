@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,6 +10,21 @@ import { projects } from '@/lib/data';
 import { Github, Link as LinkIcon } from 'lucide-react';
 
 export default function Projects() {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isClientMobile, setIsClientMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsClientMobile(window.innerWidth <= 480);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const displayProjects = isClientMobile && !isExpanded ? projects.slice(0, 2) : projects;
+
   return (
     <section id="projects" className="py-20 lg:py-32 bg-secondary">
       <div className="container">
@@ -17,7 +35,7 @@ export default function Projects() {
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project) => (
+          {displayProjects.map((project) => (
             <Card key={project.title} className="flex flex-col overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out shadow-lg hover:shadow-2xl">
               <CardHeader>
                 {project.image && (
@@ -66,6 +84,13 @@ export default function Projects() {
             </Card>
           ))}
         </div>
+        {isClientMobile && projects.length > 2 && (
+          <div className="text-center mt-8">
+            <Button variant="outline" onClick={() => setIsExpanded(prev => !prev)}>
+              {isExpanded ? 'Show Less' : 'View More'}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
