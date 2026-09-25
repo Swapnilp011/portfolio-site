@@ -1,62 +1,48 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { skills } from '@/lib/data';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Code2, Terminal, Cpu, Database, Layout, Sparkles } from 'lucide-react';
 
 export default function Skills() {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isClientMobile, setIsClientMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsClientMobile(window.innerWidth <= 480);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  const skillsToShow = isClientMobile && !isExpanded ? skills.slice(0, 4) : skills;
-
   return (
-    <section id="skills" className="py-20 lg:py-32">
+    <section id="skills" className="section section-alt">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">My Tech Stack</h2>
-          <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
-            I have experience with a variety of technologies for building modern web applications.
+        {/* Section Header */}
+        <div className="section-header">
+          <div className="section-tag">
+            <Cpu size={14} />
+            <span>Technical Proficiency</span>
+          </div>
+          <h2 className="section-title">
+            Skills &amp; <span>Technologies</span>
+          </h2>
+          <p className="section-desc">
+            A comprehensive overview of programming languages, modern web frameworks, AI tools, and databases I leverage to build scalable software.
           </p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-          {skillsToShow.map((skill) => (
-            <Card key={skill.name} className="p-4 flex flex-col items-center justify-center gap-4 transition-transform duration-300 hover:scale-105 hover:bg-secondary shadow-md hover:shadow-lg">
-              <div className="relative w-20 h-20">
+
+        {/* Skills Grid */}
+        <div className="skills-grid">
+          {skills.map((skill) => (
+            <div key={skill.name} className="skill-card">
+              <div className="skill-icon-frame">
                 {skill.logo ? (
                   <Image
                     src={skill.logo}
                     alt={`${skill.name} logo`}
-                    fill
-                    className="object-contain"
+                    width={44}
+                    height={44}
                   />
                 ) : (
-                  skill.icon && <skill.icon className="w-full h-full text-primary" />
+                  skill.icon && <skill.icon className="skill-icon-svg" />
                 )}
               </div>
-              <p className="font-semibold text-center mt-2">{skill.name}</p>
-            </Card>
+              <span className="skill-name">{skill.name}</span>
+            </div>
           ))}
         </div>
-        {isClientMobile && skills.length > 4 && (
-          <div className="text-center mt-8">
-            <Button variant="outline" onClick={() => setIsExpanded(prev => !prev)}>
-              {isExpanded ? 'Show Less' : 'View More'}
-            </Button>
-          </div>
-        )}
       </div>
     </section>
   );

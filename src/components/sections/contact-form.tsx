@@ -1,28 +1,24 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { useToast } from '@/hooks/use-toast';
+import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const { toast } = useToast();
+  const [status, setStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({
+    type: null,
+    message: '',
+  });
 
   const accessKey = '1d82e4e3-1f67-4b79-a6fc-25b755dff76a';
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setLoading(true);
-    setResult(null);
-    setError(null);
+    setStatus({ type: null, message: '' });
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     formData.append('access_key', accessKey);
 
     try {
@@ -34,28 +30,22 @@ export default function ContactForm() {
       const data = await response.json();
 
       if (data.success) {
-        setResult('Message sent successfully!');
-        toast({
-            title: "Success!",
-            description: "Your message has been sent successfully.",
+        setStatus({
+          type: 'success',
+          message: 'Thank you! Your message has been sent successfully. I will get back to you shortly.',
         });
-        (event.target as HTMLFormElement).reset();
+        form.reset();
       } else {
-        console.error('Error from Web3Forms:', data);
-        setError(data.message || 'An error occurred.');
-        toast({
-            title: "Error",
-            description: data.message || "Could not send message.",
-            variant: "destructive",
+        setStatus({
+          type: 'error',
+          message: data.message || 'Could not send message. Please try again or email me directly.',
         });
       }
     } catch (err) {
       console.error(err);
-      setError('An error occurred while submitting the form.');
-       toast({
-        title: "Error",
-        description: "An unexpected error occurred. Please try again.",
-        variant: "destructive",
+      setStatus({
+        type: 'error',
+        message: 'An unexpected error occurred while submitting. Please try emailing me directly.',
       });
     } finally {
       setLoading(false);
@@ -63,35 +53,111 @@ export default function ContactForm() {
   }
 
   return (
-    <Card className="shadow-lg">
-      <CardHeader>
-        <CardTitle className="font-headline">Send me a message</CardTitle>
-      </CardHeader>
-      <form onSubmit={handleSubmit}>
-        <CardContent className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="name">Name</Label>
-            <Input id="name" name="name" placeholder="Your Name" required />
+    <div className="contact-form-card">
+      <form onSubmit={handleSubmit} className="contact-form">
+        <div className="form-group">
+          <label htmlFor="name" className="form-label">
+            Your Name
+          </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            className="form-input"
+            placeholder="John Doe"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="email" className="form-label">
+            Email Address
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            className="form-input"
+            placeholder="john@example.com"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="phone" className="form-label">
+            Phone Number (Optional)
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            className="form-input"
+            placeholder="+91 98765 43210"
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="message" className="form-label">
+            Your Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            className="form-textarea"
+            placeholder="Tell me about your project, idea, or inquiry..."
+            required
+          />
+        </div>
+
+        {status.type && (
+          <div
+            style={{
+              padding: '12px 16px',
+              borderRadius: 'var(--radius-md)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              fontSize: '0.9rem',
+              background:
+                status.type === 'success'
+                  ? 'rgba(16, 185, 129, 0.15)'
+                  : 'rgba(239, 68, 68, 0.15)',
+              border: `1px solid ${
+                status.type === 'success'
+                  ? 'rgba(16, 185, 129, 0.3)'
+                  : 'rgba(239, 68, 68, 0.3)'
+              }`,
+              color: status.type === 'success' ? '#6ee7b7' : '#fca5a5',
+            }}
+          >
+            {status.type === 'success' ? (
+              <CheckCircle2 size={18} />
+            ) : (
+              <AlertCircle size={18} />
+            )}
+            <span>{status.message}</span>
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
-            <Input id="email" name="email" type="email" placeholder="your.email@example.com" required />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="phone">Phone Number</Label>
-            <Input id="phone" name="phone" type="tel" placeholder="Your Phone Number" />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="message">Message</Label>
-            <Textarea id="message" name="message" placeholder="Your message..." required />
-          </div>
-        </CardContent>
-        <CardFooter>
-          <Button type="submit" disabled={loading} className="w-full">
-            {loading ? 'Sending...' : 'Send Message'}
-          </Button>
-        </CardFooter>
+        )}
+
+        <button
+          type="submit"
+          disabled={loading}
+          className="btn btn-primary"
+          style={{ width: '100%', marginTop: '8px' }}
+        >
+          {loading ? (
+            <>
+              <Loader2 size={18} className="animate-spin" />
+              <span>Sending Message...</span>
+            </>
+          ) : (
+            <>
+              <span>Send Message</span>
+              <Send size={16} />
+            </>
+          )}
+        </button>
       </form>
-    </Card>
+    </div>
   );
 }

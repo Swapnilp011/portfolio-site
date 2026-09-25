@@ -1,17 +1,31 @@
+'use client';
 
 import Image from 'next/image';
+import { profileInfo } from '@/lib/data';
 
 export default function SplashScreen() {
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-background text-primary">
-      <div className="splash-animation">
-        <Image
-          src="https://raw.githubusercontent.com/Swapnilp011/profile-pictures/main/profile%20logo.png"
-          alt="Swapnil Pawar Logo"
-          width={96}
-          height={96}
-          className="w-24 h-24"
-        />
+    <div className="splash-container">
+      <div className="splash-pulse-ring">
+        <div className="splash-ring-anim"></div>
+        <div className="splash-glow-core"></div>
+        <div className="splash-logo-image">
+          <Image
+            src={profileInfo.logoUrl}
+            alt={`${profileInfo.name} Logo`}
+            width={64}
+            height={64}
+            priority
+          />
+        </div>
+      </div>
+      <div className="splash-title-text">
+        <span>{profileInfo.name}</span>
+        <span className="splash-loading-dots">
+          <span className="splash-dot"></span>
+          <span className="splash-dot"></span>
+          <span className="splash-dot"></span>
+        </span>
       </div>
     </div>
   );

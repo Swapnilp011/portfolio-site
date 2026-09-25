@@ -1,8 +1,6 @@
-
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -49,6 +47,12 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'thumb.wikimedia.org',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'images.seeklogo.com',
         port: '',
         pathname: '/**',
@@ -64,13 +68,9 @@ const nextConfig: NextConfig = {
         hostname: 'docs.flutter.dev',
         port: '',
         pathname: '/**',
-      }
+      },
     ],
   },
 };
 
 export default nextConfig;
-
-    
-
-    

@@ -1,96 +1,139 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { useState, useMemo } from 'react';
 import { projects } from '@/lib/data';
-import { Github, Link as LinkIcon } from 'lucide-react';
+import { Github, ExternalLink, Sparkles, Layers, ArrowUpRight } from 'lucide-react';
+
+const CATEGORIES = [
+  { id: 'all', label: 'All Projects' },
+  { id: 'ai', label: 'AI & RAG' },
+  { id: 'fullstack', label: 'Full-Stack' },
+  { id: 'frontend', label: 'Web & UI' },
+];
 
 export default function Projects() {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isClientMobile, setIsClientMobile] = useState(false);
+  const [activeCategory, setActiveCategory] = useState('all');
 
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsClientMobile(window.innerWidth <= 480);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  const displayProjects = isClientMobile && !isExpanded ? projects.slice(0, 2) : projects;
+  const filteredProjects = useMemo(() => {
+    if (activeCategory === 'all') return projects;
+    if (activeCategory === 'ai') {
+      return projects.filter((p) =>
+        p.tags.some((t) => ['AI', 'RAG', 'Gemini API', 'ChromaDB'].includes(t))
+      );
+    }
+    if (activeCategory === 'fullstack') {
+      return projects.filter((p) =>
+        p.tags.some((t) => ['Full-stack', 'FastAPI', 'Firebase', 'SQL Server'].includes(t))
+      );
+    }
+    if (activeCategory === 'frontend') {
+      return projects.filter((p) =>
+        p.tags.some((t) => ['React.js', 'Next.js', 'UI/UX', 'Web Development', 'Frontend', 'EdTech'].includes(t))
+      );
+    }
+    return projects;
+  }, [activeCategory]);
 
   return (
-    <section id="projects" className="py-20 lg:py-32 bg-secondary">
+    <section id="projects" className="section section-alt">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">My Projects</h2>
-          <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
-            Here are some of the projects I've worked on, showcasing my skills and passion for development.
+        {/* Section Header */}
+        <div className="section-header">
+          <div className="section-tag">
+            <Layers size={14} />
+            <span>Portfolio Showcase</span>
+          </div>
+          <h2 className="section-title">
+            Featured <span>Engineering Projects</span>
+          </h2>
+          <p className="section-desc">
+            A curated collection of full-stack web applications, AI/RAG architectures, and responsive systems built for real-world impact.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-8">
-          {displayProjects.map((project) => (
-            <Card key={project.title} className="flex flex-col overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out shadow-lg hover:shadow-2xl">
-              <CardHeader>
-                {project.image && (
-                  <div className="aspect-video relative">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover rounded-t-lg"
-                      data-ai-hint="project screenshot"
-                    />
-                  </div>
-                )}
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <CardTitle className="font-headline text-2xl mb-2">{project.title}</CardTitle>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary">{tag}</Badge>
-                  ))}
-                </div>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                    {project.description.map((point, index) => (
-                        <li key={index}>{point}</li>
-                    ))}
-                </ul>
-              </CardContent>
-              <CardFooter className="flex justify-end gap-2">
+
+        {/* Interactive Filter Bar */}
+        <div className="projects-filter-bar">
+          {CATEGORIES.map((cat) => {
+            const count =
+              cat.id === 'all'
+                ? projects.length
+                : cat.id === 'ai'
+                ? projects.filter((p) => p.tags.some((t) => ['AI', 'RAG', 'Gemini API', 'ChromaDB'].includes(t))).length
+                : cat.id === 'fullstack'
+                ? projects.filter((p) => p.tags.some((t) => ['Full-stack', 'FastAPI', 'Firebase', 'SQL Server'].includes(t))).length
+                : projects.filter((p) => p.tags.some((t) => ['React.js', 'Next.js', 'UI/UX', 'Web Development', 'Frontend', 'EdTech'].includes(t))).length;
+
+            return (
+              <button
+                key={cat.id}
+                type="button"
+                className={`filter-btn ${activeCategory === cat.id ? 'active' : ''}`}
+                onClick={() => setActiveCategory(cat.id)}
+              >
+                <span>{cat.label}</span>
+                <span className="filter-count">{count}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Projects Grid */}
+        <div className="projects-grid">
+          {filteredProjects.map((project) => (
+            <article key={project.title} className="project-card">
+              {/* Project Header */}
+              <div className="project-header">
+                <h3 className="project-title">{project.title}</h3>
+              </div>
+
+              {/* Tag Pills */}
+              <div className="project-tags">
+                {project.tags.map((tag) => (
+                  <span key={tag} className="project-tag-pill">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Bullet Points */}
+              <ul className="project-desc-list">
+                {project.description.map((point, i) => (
+                  <li key={i} className="project-desc-item">
+                    <span className="project-desc-bullet"></span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Project Action Links */}
+              <div className="project-footer">
                 {project.repoUrl && (
-                  <Button variant="outline" asChild>
-                    <Link href={project.repoUrl} target="_blank">
-                      <Github className="mr-2 h-4 w-4" />
-                      GitHub
-                    </Link>
-                  </Button>
+                  <a
+                    href={project.repoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary btn-sm"
+                  >
+                    <Github size={15} />
+                    <span>Source Code</span>
+                  </a>
                 )}
+
                 {project.liveUrl && (
-                  <Button asChild>
-                    <Link href={project.liveUrl} target="_blank">
-                       <LinkIcon className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </Link>
-                  </Button>
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary btn-sm"
+                  >
+                    <span>Live Demo</span>
+                    <ArrowUpRight size={15} />
+                  </a>
                 )}
-              </CardFooter>
-            </Card>
+              </div>
+            </article>
           ))}
         </div>
-        {isClientMobile && projects.length > 2 && (
-          <div className="text-center mt-8">
-            <Button variant="outline" onClick={() => setIsExpanded(prev => !prev)}>
-              {isExpanded ? 'Show Less' : 'View More'}
-            </Button>
-          </div>
-        )}
       </div>
     </section>
   );

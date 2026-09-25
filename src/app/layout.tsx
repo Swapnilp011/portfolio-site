@@ -1,20 +1,10 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
-import type { Metadata } from 'next';
 import './globals.css';
-import { cn } from '@/lib/utils';
-import { Toaster } from "@/components/ui/toaster"
 import SplashScreen from '@/components/layout/splash-screen';
+import { profileInfo } from '@/lib/data';
 import '@/lib/firebase';
-
-/*
-export const metadata: Metadata = {
-  title: 'Swapnil Pawar - B.Tech IT Student Portfolio',
-  description: 'A personal portfolio website for Swapnil Pawar to showcase projects and skills.',
-};
-*/
 
 export default function RootLayout({
   children,
@@ -24,29 +14,31 @@ export default function RootLayout({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2500);
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" data-theme="dark">
       <head>
-        <title>Swapnil Pawar - B.Tech IT Student Portfolio</title>
-        <meta name="description" content="A personal portfolio website for Swapnil Pawar to showcase projects and skills." />
-        <link rel="icon" href="https://raw.githubusercontent.com/Swapnilp011/profile-pictures/main/profile%20logo.png" />
+        <title>{profileInfo.name} | AI &amp; Full-Stack Software Developer</title>
+        <meta
+          name="description"
+          content="Personal portfolio of Swapnil Pawar - B.Tech IT student specializing in Generative AI, RAG architectures, and modern full-stack web applications."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href={profileInfo.logoUrl} />
+        <link rel="shortcut icon" type="image/png" href={profileInfo.logoUrl} />
+        <link rel="apple-touch-icon" href={profileInfo.logoUrl} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body className={cn("font-body antialiased", "bg-background text-foreground")}>
-        {loading ? (
-          <SplashScreen />
-        ) : (
-          <>
-            {children}
-            <Toaster />
-          </>
-        )}
+      <body>
+        {loading ? <SplashScreen /> : children}
       </body>
     </html>
   );

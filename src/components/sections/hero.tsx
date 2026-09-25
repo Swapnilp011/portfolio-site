@@ -1,51 +1,135 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Download } from 'lucide-react';
-import { useEffect } from 'react';
-import { useToast } from '@/hooks/use-toast';
 import { Stars } from '@/components/ui/stars';
+import { profileInfo, socialLinks } from '@/lib/data';
+import { Download, ArrowRight, Sparkles, Terminal, Code2 } from 'lucide-react';
 
 export default function Hero() {
-  const { toast } = useToast();
-
-  useEffect(() => {
-    toast({
-      title: 'Welcome!',
-      description: 'Thanks for visiting my profile.',
-    });
-  }, [toast]);
-
   return (
-    <section id="home" className="relative container flex flex-col md:flex-row items-center justify-center text-center md:text-left min-h-[calc(100vh-56px)] gap-12 py-16">
+    <section id="home" className="hero-section">
       <Stars />
-      <div className="md:w-1/2 flex flex-col items-center md:items-start gap-4 z-10">
-        <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-          Hi, I&apos;m Swapnil Pawar
-        </h1>
-        <p className="max-w-xl text-lg text-muted-foreground">
-          Welcome to my digital space! I am an Information Technology student with a passion for software development and creating elegant, efficient solutions.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 mt-4">
-          <Button size="lg" asChild>
-            <Link href="/#projects">View My Work</Link>
-          </Button>
-        </div>
-      </div>
-      <div className="md:w-1/2 flex justify-center z-10">
-        <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-           <Image
-            src="https://raw.githubusercontent.com/Swapnilp011/profile-pictures/main/WhatsApp%20Image%202025-08-26%20at%2020.01.56_ab8a3dea.jpg"
-            alt="Profile Picture"
-            width={400}
-            height={400}
-            className="rounded-full object-cover border-4 border-primary/10 shadow-lg"
-            priority
-            data-ai-hint="profile picture man"
-          />
-          <div className="absolute inset-0 rounded-full border-4 border-primary animate-pulse opacity-20"></div>
+      <div className="container">
+        <div className="hero-grid">
+          {/* Hero Left Content */}
+          <div className="hero-content">
+            {/* Live Availability Pill */}
+            <div className="hero-status-pill">
+              <span className="status-dot-pulse"></span>
+              <span>Available for Software Engineering Roles</span>
+            </div>
+
+            {/* Main Headline */}
+            <h1 className="hero-title">
+              Crafting Intelligent Systems &amp; <span className="hero-title-gradient">Modern Web Experiences</span>
+            </h1>
+
+            {/* Subtitle / Intro */}
+            <p className="hero-subtitle">
+              Hi, I&apos;m <strong>Swapnil Pawar</strong>. A passionate Information Technology student specializing in <strong>Generative AI, Full-Stack Development, and high-performance Web Architectures</strong>.
+            </p>
+
+            {/* Action Buttons & Quick Social Badges */}
+            <div className="hero-actions">
+              <a href="#projects" className="btn btn-primary">
+                <span>View My Work</span>
+                <ArrowRight size={18} />
+              </a>
+
+              <a
+                href="https://drive.google.com/file/d/18EjAC0SDmztRZwpDj_C78PE4vCYesIHr/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+              >
+                <span>Download CV</span>
+                <Download size={18} />
+              </a>
+            </div>
+
+            {/* Quick Identifiable Profile Links */}
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '10px', marginTop: '6px' }}>
+              {socialLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pill"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    padding: '6px 12px',
+                    fontSize: '0.85rem',
+                    color: 'var(--text-secondary)',
+                    transition: 'all var(--transition-fast)',
+                    border: '1px solid var(--border-subtle)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = link.color || '#fff';
+                    e.currentTarget.style.borderColor = link.color || 'var(--primary-light)';
+                    e.currentTarget.style.boxShadow = `0 0 12px ${link.color ? link.color + '40' : 'var(--primary-glow)'}`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = 'var(--text-secondary)';
+                    e.currentTarget.style.borderColor = 'var(--border-subtle)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                  title={`Open ${link.name}`}
+                >
+                  <link.icon size={16} />
+                  <span>{link.name}</span>
+                </a>
+              ))}
+            </div>
+
+            {/* Quick Stats / Highlights */}
+            <div className="hero-stats-row">
+              <div className="hero-stat-card">
+                <span className="hero-stat-value">6+</span>
+                <span className="hero-stat-label">Featured Projects</span>
+              </div>
+              <div className="hero-stat-card">
+                <span className="hero-stat-value">Final Year</span>
+                <span className="hero-stat-label">B.Tech IT (IICT)</span>
+              </div>
+              <div className="hero-stat-card">
+                <span className="hero-stat-value">AI + Web</span>
+                <span className="hero-stat-label">Core Focus</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Hero Right Visual: Profile Avatar with Glowing Halo & Floating Badges */}
+          <div className="hero-visual">
+            <div className="avatar-halo-wrap">
+              <div className="avatar-ambient-glow"></div>
+              
+              <div className="avatar-ring-outer">
+                <div className="avatar-image-box">
+                  <Image
+                    src={profileInfo.avatarUrl}
+                    alt={`${profileInfo.name} Profile`}
+                    width={400}
+                    height={400}
+                    priority
+                  />
+                </div>
+              </div>
+
+              {/* Floating Badges */}
+              <div className="floating-tech-badge badge-top-left">
+                <Terminal size={16} color="#818cf8" />
+                <span>RAG &amp; GenAI</span>
+              </div>
+
+              <div className="floating-tech-badge badge-bottom-right">
+                <Code2 size={16} color="#06b6d4" />
+                <span>Full-Stack Dev</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,0 +1,13 @@
+/* Master Vanilla CSS Entrypoint */
+@import './variables.css';
+@import './reset.css';
+@import './header.css';
+@import './hero.css';
+@import './projects.css';
+@import './skills.css';
+@import './experience.css';
+@import './education.css';
+@import './contact.css';
+@import './footer.css';
+@import './splash.css';
+@import './toast.css';

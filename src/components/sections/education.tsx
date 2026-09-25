@@ -1,55 +1,68 @@
+'use client';
+
 import Image from 'next/image';
-import Link from 'next/link';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { GraduationCap, Calendar, MapPin, Award, BookOpen } from 'lucide-react';
 
 export default function Education() {
   return (
-    <section id="education" className="bg-secondary py-20 lg:py-32">
+    <section id="education" className="section">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">
-            Education
+        {/* Section Header */}
+        <div className="section-header">
+          <div className="section-tag">
+            <GraduationCap size={14} />
+            <span>Academic Background</span>
+          </div>
+          <h2 className="section-title">
+            Education &amp; <span>Degrees</span>
           </h2>
-          <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
-            My academic journey and qualifications.
+          <p className="section-desc">
+            Formal engineering education focused on computer science fundamentals and software systems.
           </p>
         </div>
-        <div className="max-w-2xl mx-auto">
-          <Card className="shadow-lg">
-            <CardHeader className="flex flex-row items-start gap-4">
-               <Link href="https://www.mgmu.ac.in/" target="_blank" rel="noopener noreferrer" className="relative w-20 h-20 flex-shrink-0">
+
+        {/* Education Card */}
+        <div className="education-wrap">
+          <div className="education-card">
+            <div className="education-header">
+              <div className="education-logo-box">
                 <Image
                   src="https://cdn.mgmtech.org/static/mgmu.ac.in/assets/images/LogoMGM.svg"
                   alt="MGM University Logo"
-                  fill
-                  className="object-contain"
+                  width={52}
+                  height={52}
                 />
-              </Link>
-              <div>
-                <CardTitle className="font-headline text-2xl">
-                  Bachelor of Technology - Information Technology
-                </CardTitle>
-                <CardDescription className="text-base">
-                  <Link href="https://www.mgmu.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    MGM University, Aurangabad
-                  </Link>
-                </CardDescription>
               </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Currently in my third year, with an expected graduation in 2027.
-                I am focusing on building a strong foundation in software
-                development and computer science fundamentals.
-              </p>
-            </CardContent>
-          </Card>
+
+              <div>
+                <h3 className="education-degree">
+                  Bachelor of Technology - Information Technology
+                </h3>
+                <p className="education-institution">
+                  Institute of Information and Communication Technology (IICT), MGM University
+                </p>
+              </div>
+            </div>
+
+            <div className="education-badges-row">
+              <span className="pill pill-primary">
+                <Calendar size={13} />
+                <span>B.Tech IT</span>
+              </span>
+              <span className="pill pill-cyan">
+                <MapPin size={13} />
+                <span>Chhatrapati Sambhajinagar, India</span>
+              </span>
+              <span className="pill pill-emerald">
+                <Award size={13} />
+                <span>Final Year Student</span>
+              </span>
+            </div>
+
+            <p className="education-text">
+              Pursuing my final year at the Institute of Information and Communication Technology (IICT), building a strong foundation in Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems, and Modern AI/Full-Stack Software Architecture.
+            </p>
+          </div>
         </div>
       </div>
     </section>

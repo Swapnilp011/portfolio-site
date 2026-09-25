@@ -1,71 +1,88 @@
+'use client';
+
 import Image from 'next/image';
-import Link from 'next/link';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 import { experience } from '@/lib/data';
+import { Briefcase, Calendar, MapPin, ExternalLink, CheckCircle2 } from 'lucide-react';
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 lg:py-32">
+    <section id="experience" className="section">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">
-            Work Experience
+        {/* Section Header */}
+        <div className="section-header">
+          <div className="section-tag">
+            <Briefcase size={14} />
+            <span>Career Journey</span>
+          </div>
+          <h2 className="section-title">
+            Work <span>Experience</span>
           </h2>
-          <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
-            My professional journey and accomplishments.
+          <p className="section-desc">
+            Professional track record and hands-on industry experience building modern web products.
           </p>
         </div>
-        <div className="max-w-4xl mx-auto space-y-8">
+
+        {/* Timeline List */}
+        <div className="timeline-wrap">
           {experience.map((job) => (
-            <Card key={job.title} className="shadow-lg">
-              <CardHeader className="flex flex-col md:flex-row items-start gap-4">
-                {job.companyLogo && (
-                  <Link href={job.companyUrl || '#'} target="_blank" rel="noopener noreferrer" className="relative w-24 h-16 flex-shrink-0">
-                    <Image
-                      src={job.companyLogo}
-                      alt={`${job.company} Logo`}
-                      fill
-                      className="object-contain"
-                    />
-                  </Link>
-                )}
-                <div className="flex-grow">
-                    <div className="flex flex-col sm:flex-row justify-between items-start">
-                        <div>
-                            <CardTitle className="font-headline text-2xl">
-                            {job.title}
-                            </CardTitle>
-                            <CardDescription className="text-base font-semibold">
-                                {job.companyUrl ? (
-                                <Link href={job.companyUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                                    {job.company}
-                                </Link>
-                                ) : (
-                                    job.company
-                                )}
-                            </CardDescription>
-                        </div>
-                        <div className="text-left sm:text-right text-muted-foreground text-sm flex-shrink-0 mt-2 sm:mt-0">
-                            <p>{job.period}</p>
-                            <p>{job.location}</p>
-                        </div>
+            <div key={job.title} className="timeline-item">
+              <div className="timeline-node"></div>
+
+              <div className="timeline-card">
+                <div className="timeline-card-header">
+                  <div className="timeline-company-info">
+                    {job.companyLogo && (
+                      <div className="timeline-logo-box">
+                        <Image
+                          src={job.companyLogo}
+                          alt={`${job.company} Logo`}
+                          width={48}
+                          height={48}
+                        />
+                      </div>
+                    )}
+                    <div>
+                      <h3 className="timeline-role-title">{job.title}</h3>
+                      <p className="timeline-company-name">
+                        {job.companyUrl ? (
+                          <a
+                            href={job.companyUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+                          >
+                            <span>{job.company}</span>
+                            <ExternalLink size={13} />
+                          </a>
+                        ) : (
+                          job.company
+                        )}
+                      </p>
                     </div>
+                  </div>
+
+                  <div className="timeline-meta-chips">
+                    <span className="timeline-chip">
+                      <Calendar size={13} color="#818cf8" />
+                      <span>{job.period}</span>
+                    </span>
+                    <span className="timeline-chip">
+                      <MapPin size={13} color="#06b6d4" />
+                      <span>{job.location}</span>
+                    </span>
+                  </div>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                    {job.description.map((point, index) => (
-                        <li key={index}>{point}</li>
-                    ))}
+
+                <ul className="timeline-bullet-list">
+                  {job.description.map((point, index) => (
+                    <li key={index} className="timeline-bullet-item">
+                      <span className="timeline-bullet-dot"></span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

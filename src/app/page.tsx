@@ -9,9 +9,9 @@ import Contact from '@/components/sections/contact';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
-      <main className="flex-grow">
+      <main style={{ flex: '1 0 auto' }}>
         <Hero />
         <Projects />
         <Experience />
