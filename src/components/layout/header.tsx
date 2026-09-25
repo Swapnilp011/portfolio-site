@@ -103,7 +103,7 @@ export default function Header() {
               </button>
 
               <a
-                href="https://drive.google.com/file/d/18EjAC0SDmztRZwpDj_C78PE4vCYesIHr/view?usp=sharing"
+                href={profileInfo.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary btn-sm header-cta-cv"
@@ -188,7 +188,7 @@ export default function Header() {
 
         <div className="mobile-drawer-footer">
           <a
-            href="https://drive.google.com/file/d/18EjAC0SDmztRZwpDj_C78PE4vCYesIHr/view?usp=sharing"
+            href={profileInfo.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-secondary"

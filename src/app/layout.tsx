@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark">
       <head>
-        <title>{profileInfo.name} | AI &amp; Full-Stack Software Developer</title>
+        <title>{`${profileInfo.name} | AI & Full-Stack Software Developer`}</title>
         <meta
           name="description"
           content="Personal portfolio of Swapnil Pawar - B.Tech IT student specializing in Generative AI, RAG architectures, and modern full-stack web applications."

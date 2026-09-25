@@ -6,7 +6,7 @@ export const profileInfo = {
   name: 'Swapnil Pawar',
   avatarUrl: '/profilepic.jpg',
   logoUrl: '/profile-logo.png',
-  resumeUrl: 'https://drive.google.com/file/d/18EjAC0SDmztRZwpDj_C78PE4vCYesIHr/view?usp=sharing',
+  resumeUrl: '/Swapnil%20Pawar%20Resume.pdf',
   leetcodeUrl: 'https://leetcode.com/u/swapnilp011/',
   email: 'swapnildpawar011@gmail.com',
   phone: '+91 7387336071',

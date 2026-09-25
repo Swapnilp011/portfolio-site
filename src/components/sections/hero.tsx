@@ -37,7 +37,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://drive.google.com/file/d/18EjAC0SDmztRZwpDj_C78PE4vCYesIHr/view?usp=sharing"
+                href={profileInfo.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary"
